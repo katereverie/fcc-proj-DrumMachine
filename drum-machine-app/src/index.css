@@ -1,0 +1,40 @@
+:root {
+    --primary-color: rgb(255, 255, 255, 0.9);
+    --secondary-color: rgb(0, 0, 0, 0.9);
+    --accent-color: rgba(212, 20, 20, 0.9);
+  
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+  
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+* {
+    font-weight: 600;
+    user-select: none;
+}
+  
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-height: 100vh;
+}
+  
+button {
+    border: none;
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+  
+@media (prefers-color-scheme: light) {
+    button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+}  
