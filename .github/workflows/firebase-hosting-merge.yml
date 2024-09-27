@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies and build
-        working-directory: ./drum-machine
+        working-directory: ./drum-machine-app
         run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -20,4 +20,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FCC_PROJ_DRUM_MACHINE }}
           channelId: live
           projectId: fcc-proj-drum-machine
-          entryPoint: './drum-machine'
+          entryPoint: './drum-machine-app'
